@@ -84,7 +84,7 @@ export async function fetchCommits(params: {
     const commits: Commit[] = response.data.map((commit) => ({
       sha: commit.sha,
       message: commit.commit?.message || '',
-      author: commit.author?.login || '',
+      author: commit.author?.login || commit.commit?.author?.name || 'Unknown',
       date: commit.commit?.committer?.date || '',
       stats: {
         additions: 0,
