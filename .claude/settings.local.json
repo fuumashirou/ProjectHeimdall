@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"/Users/matiassalgado/Documents/Projects/Proyecto productividad\" -type f -name \".*\" 2>/dev/null | head -20)"
+    ]
+  }
+}

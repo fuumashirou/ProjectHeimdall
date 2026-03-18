@@ -1,0 +1,99 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jsdoc"
+  ],
+  "rules": {
+    "import/no-unused-modules": "warn",
+    "import/no-duplicates": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": "error",
+    "no-alert": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "complexity": ["warn", 10],
+    "max-depth": ["warn", 4],
+    "max-lines": ["warn", 300],
+    "max-params": ["warn", 4],
+    "max-statements": ["warn", 20],
+    "arrow-body-style": ["warn", "as-needed"],
+    "no-confusing-arrow": "error",
+    "prefer-arrow-callback": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsdoc/check-alignment": "warn",
+    "jsdoc/check-indentation": "warn",
+    "jsdoc/check-syntax": "error",
+    "jsdoc/require-description": "error",
+    "jsdoc/require-example": "error",
+    "jsdoc/require-param": "error",
+    "jsdoc/require-param-description": "error",
+    "jsdoc/require-param-type": "error",
+    "jsdoc/require-returns": "warn",
+    "jsdoc/require-returns-check": "warn",
+    "jsdoc/require-returns-description": "warn",
+    "jsdoc/require-returns-type": "warn",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error",
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "all"],
+    "brace-style": ["error", "1tbs"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "template-curly-spacing": "error",
+    "no-empty-function": "warn",
+    "no-unused-expressions": "error",
+    "no-unreachable-loop": "warn",
+    "require-await": "warn",
+    "no-return-await": "error",
+    "camelcase": ["error", { "properties": "never" }],
+    "no-shadow": "error",
+    "no-underscore-dangle": "off"
+  },
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  }
+}
